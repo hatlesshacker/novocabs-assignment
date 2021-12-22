@@ -5,8 +5,8 @@
 <script>
     var pusher;
 
-    var latitude = 0;
-    var longitude = 0;
+    var latitude = 22.62745785072815;
+    var longitude = 88.38917010404226;
 
     $(document).ready(function() {
 
@@ -21,7 +21,7 @@
             subscribe(user_id);
         });
 
-        setInterval(modifyLocation, 10000); // 10 seconds
+        setInterval(modifyLocation, 2000); // 10 seconds
     })
 
     function subscribe(user_id) {

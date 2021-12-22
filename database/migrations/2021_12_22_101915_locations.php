@@ -16,8 +16,7 @@ class Locations extends Migration
         Schema::create('locations', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id');
-            $table->string('location');
-            $table->timestamp('updated_at')->nullable();
+            $table->point('location')->nullable();
         });
     }
 
