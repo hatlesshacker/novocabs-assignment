@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LocationController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,15 +18,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::view('/location/update', 'location');
+
+Route::view('/location/search', 'search');
+Route::get('/location/searchresult', [LocationController::class, 'search_result']);
+
 Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

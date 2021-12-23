@@ -21,5 +21,6 @@ class Location extends Model
 
     protected $spatialFields = [
         'location',
+        'area',
     ];
 }
